@@ -1,0 +1,22 @@
+spring:
+ datasource:
+   driver-class-name: com.mysql.jdbc.Driver
+   url: jdbc:mysql://127.0.0.1:3306/storm?useSSL=false
+   username: root
+   password: root
+
+ jpa:
+   hibernate:
+     ddl-auto: update
+   show-sql: true
+ mvc:
+   view:
+     prefix: /WEB-INF/jsp/
+     suffix: .jsp
+ thymeleaf:
+   cache: false
+   enabled: false
+
+server:
+  port: 9998
+  context-path: /map
