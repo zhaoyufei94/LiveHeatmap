@@ -111,3 +111,17 @@ log.dirs=/home/yufei/app/tmp/kafka-log
 ```
 
 ### JDBC
+
+
+## 需要修改的地方
+- config/logstash/project.conf
+  - line 3: 路径对应 `get_twitter.py` 中28行的地址
+  - line 10: 主机名
+- /etc/hosts
+  - 添加虚拟机ip和主机名
+  - 如果 Kafka 跑在本地不需要修改
+- project/src/main/java/streaming/Kafka/StormKafkaTopo.java
+  - line 18: `ubunut`改为上一步中添加的主机名
+  - line 45, 46: 改为本地 MySQL 服务器的用户名和密码
+- web-app/src/main/resources/application-dev.yml
+  - line 5, 6
