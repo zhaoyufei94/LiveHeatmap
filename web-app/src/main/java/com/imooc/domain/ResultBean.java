@@ -8,6 +8,12 @@ public class ResultBean {
 
     private long count;
 
+    private double sent;
+
+    public double getSent() {return sent; }
+
+    public void setSent(double sent) {this.sent = sent; }
+
     public double getLng() {
         return lng;
     }
