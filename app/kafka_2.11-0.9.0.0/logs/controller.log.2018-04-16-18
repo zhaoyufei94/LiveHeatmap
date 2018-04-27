@@ -1,0 +1,7 @@
+[2018-04-16 18:55:35,648] INFO [Controller 0]: Controller starting up (kafka.controller.KafkaController)
+[2018-04-16 18:55:35,666] INFO [Controller 0]: Controller startup complete (kafka.controller.KafkaController)
+[2018-04-16 18:55:37,328] DEBUG [Controller 0]: Controller resigning, broker id 0 (kafka.controller.KafkaController)
+[2018-04-16 18:55:37,328] DEBUG [Controller 0]: De-registering IsrChangeNotificationListener (kafka.controller.KafkaController)
+[2018-04-16 18:55:37,330] INFO [Partition state machine on Controller 0]: Stopped partition state machine (kafka.controller.PartitionStateMachine)
+[2018-04-16 18:55:37,331] INFO [Replica state machine on controller 0]: Stopped replica state machine (kafka.controller.ReplicaStateMachine)
+[2018-04-16 18:55:37,331] INFO [Controller 0]: Broker 0 resigned as the controller (kafka.controller.KafkaController)

@@ -1,0 +1,1 @@
+[2018-04-15 13:38:49,152] TRACE Controller 0 epoch 1 received response {error_code=0} for a request sent to broker Node(0, ubuntu, 9092) (state.change.logger)
