@@ -110,6 +110,14 @@ log.dirs=/home/yufei/app/tmp/kafka-log
 > kafka-console-consumer.sh --zookeeper ubuntu:2181 --topic project_topic
 ```
 
+直接用kafka读twitter, 传送到topic内
+```
+> 需要修改topic name。（project_topic） 
+> 启动Zookeeper，Kafka服务器
+> python Twitter_Kafka.py
+启动了Kafka Producer，可以直接通过storm在topic中读取信息
+```
+
 ### JDBC
 
 
