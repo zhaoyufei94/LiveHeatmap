@@ -1,0 +1,17 @@
+Storm-Kafka.java 是storm windowing的简单例程。
+从kafka topic中读取数据，将原来的bolt变成了tumbling window。
+
+实现类：BaseWindowedBolt
+
+修改的地方：
+1.public static class TumblingWindow extends BaseWindowedBolt {
+｝
+window类的数据被读出转化成string value（和原来的数据类型相同）
+
+2.main函数中：
+builder.setBolt("bolt",
+                new TumblingWindow().withTumblingWindow(BaseWindowedBolt.Duration.seconds(3)),
+                1).shuffleGrouping("spout");
+通过withTumblingWindow（）设置窗口类型，参数是窗口大小，有限制（30秒不行，最多好像是15秒）
+
+http://storm.apache.org/releases/1.2.1/Windowing.html
