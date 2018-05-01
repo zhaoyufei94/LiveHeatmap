@@ -4,6 +4,7 @@ from tweepy import Stream
 import json
 import marshal
 import time
+import numpy as np
 from kafka import KafkaProducer
 
 from twitter_credentials import *
@@ -30,8 +31,9 @@ class Listener(StreamListener):
             lon = (coordinates[0][0] + coordinates[2][0]) / 2
             lat = (coordinates[0][1] + coordinates[1][1]) / 2
             t = time.time()
+            sentiment = np.random.randint(2)
 
-            msg = "{:0.2f},{:0.2f} {}".format(lon, lat, int(t)).encode('UTF-8')
+            msg = "{:0.2f},{:0.2f} {} {}".format(lon, lat, int(t), sentiment).encode('UTF-8')
             print(msg)
             producer.send(TopicName, msg)
             # with open("./data/logs/access.log", "a+") as fd:
@@ -57,5 +59,3 @@ if __name__ == "__main__":
     GEOBOX_CN = [104, 25, 119, 34]
 
     stream.filter(locations=GEOBOX_US)
-
-    
